@@ -31,9 +31,9 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="jToggleButton9" alignment="0" pref="62" max="32767" attributes="0"/>
@@ -88,36 +88,37 @@
                           </Group>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jToggleButton26" alignment="0" pref="62" max="32767" attributes="0"/>
-                              <Component id="jToggleButton24" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jToggleButton22" alignment="0" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jToggleButton20" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jToggleButton36" alignment="0" pref="62" max="32767" attributes="0"/>
-                              <Component id="jToggleButton34" alignment="0" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jToggleButton28" alignment="0" pref="62" max="32767" attributes="0"/>
-                              <Component id="jToggleButton30" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jToggleButton31" alignment="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
                   </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="bitaBtn" min="-2" pref="72" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+                      <Component id="bitaButt" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="MyCartsBtn" pref="122" max="32767" attributes="0"/>
+                          <Component id="myCartBtn" max="32767" attributes="0"/>
                           <Component id="jLabel2" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="enemBtn" min="-2" pref="72" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="64" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="EnemyButt" min="-2" pref="62" max="-2" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="jToggleButton26" alignment="0" pref="62" max="32767" attributes="0"/>
+                      <Component id="jToggleButton24" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jToggleButton22" alignment="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="jToggleButton20" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jToggleButton36" alignment="0" pref="62" max="32767" attributes="0"/>
+                      <Component id="jToggleButton34" alignment="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="jToggleButton28" alignment="0" pref="62" max="32767" attributes="0"/>
+                      <Component id="jToggleButton30" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jToggleButton31" alignment="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -214,9 +215,9 @@
               </Group>
               <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="bitaBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="enemBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="MyCartsBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="bitaButt" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="EnemyButt" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="myCartBtn" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jLabel2" min="-2" pref="119" max="-2" attributes="0"/>
@@ -516,33 +517,33 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jToggleButton36ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JToggleButton" name="bitaBtn">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="&#x411;&#x438;&#x442;&#x430;"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bitaBtnActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#x41c;&#x43e;&#x438; &#x43a;&#x430;&#x440;&#x442;&#x435;&#x439;&#x43a;&#x438;"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JToggleButton" name="enemBtn">
+    <Component class="javax.swing.JButton" name="bitaButt">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#x411;&#x438;&#x442;&#x430;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bitaButtActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="EnemyButt">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#x412;&#x440;&#x430;&#x433;"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="enemBtnActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EnemyButtActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JToggleButton" name="MyCartsBtn">
+    <Component class="javax.swing.JButton" name="myCartBtn">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#x41c;&#x43e;&#x438; &#x43a;&#x430;&#x440;&#x442;&#x44b;"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MyCartsBtnActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="myCartBtnActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

@@ -4,7 +4,13 @@
  */
 package durak_helper;
 
-import java.awt.Color;
+import java.util.HashMap;
+import java.util.Map;
+import javax.swing.JToggleButton;
+import javafx.util.Pair;
+
+
+
 
 /**
  *
@@ -20,6 +26,8 @@ public class durakInt extends javax.swing.JFrame {
     }
     
     boolean bita, myCart, enem1;
+    //public static  List<javax.swing.JToggleButton> cards = null;
+    public static Map<String, JToggleButton> cards = new HashMap<>();
     
      
  /* This method is called from within the constructor to initialize the form.
@@ -69,10 +77,10 @@ public class durakInt extends javax.swing.JFrame {
         jToggleButton34 = new javax.swing.JToggleButton();
         jToggleButton35 = new javax.swing.JToggleButton();
         jToggleButton36 = new javax.swing.JToggleButton();
-        bitaBtn = new javax.swing.JToggleButton();
         jLabel2 = new javax.swing.JLabel();
-        enemBtn = new javax.swing.JToggleButton();
-        MyCartsBtn = new javax.swing.JToggleButton();
+        bitaButt = new javax.swing.JButton();
+        EnemyButt = new javax.swing.JButton();
+        myCartBtn = new javax.swing.JButton();
 
         jLabel1.setText("jLabel1");
 
@@ -340,26 +348,26 @@ public class durakInt extends javax.swing.JFrame {
             }
         });
 
-        bitaBtn.setText("Бита");
-        bitaBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bitaBtnActionPerformed(evt);
-            }
-        });
-
         jLabel2.setText("Мои картейки");
 
-        enemBtn.setText("Враг");
-        enemBtn.addActionListener(new java.awt.event.ActionListener() {
+        bitaButt.setText("Бита");
+        bitaButt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                enemBtnActionPerformed(evt);
+                bitaButtActionPerformed(evt);
             }
         });
 
-        MyCartsBtn.setText("Мои карты");
-        MyCartsBtn.addActionListener(new java.awt.event.ActionListener() {
+        EnemyButt.setText("Враг");
+        EnemyButt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MyCartsBtnActionPerformed(evt);
+                EnemyButtActionPerformed(evt);
+            }
+        });
+
+        myCartBtn.setText("Мои карты");
+        myCartBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                myCartBtnActionPerformed(evt);
             }
         });
 
@@ -368,9 +376,9 @@ public class durakInt extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(66, 66, 66)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(66, 66, 66)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jToggleButton9, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
@@ -412,29 +420,30 @@ public class durakInt extends javax.swing.JFrame {
                                 .addComponent(jToggleButton32, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
                                 .addComponent(jToggleButton33, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jToggleButton35, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(18, 18, 18))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(69, 69, 69)
+                        .addComponent(bitaButt)
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jToggleButton26, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
-                                .addComponent(jToggleButton24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jToggleButton22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jToggleButton20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jToggleButton36, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
-                                .addComponent(jToggleButton34, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jToggleButton28, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
-                                .addComponent(jToggleButton30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jToggleButton31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(bitaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(MyCartsBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
+                            .addComponent(myCartBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(18, 18, 18)
-                        .addComponent(enemBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(64, Short.MAX_VALUE))
+                        .addGap(21, 21, 21)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(EnemyButt, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jToggleButton26, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
+                        .addComponent(jToggleButton24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jToggleButton22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jToggleButton20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jToggleButton36, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
+                        .addComponent(jToggleButton34, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jToggleButton28, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
+                        .addComponent(jToggleButton30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jToggleButton31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(70, 70, 70))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -519,9 +528,9 @@ public class durakInt extends javax.swing.JFrame {
                                 .addComponent(jToggleButton22)))))
                 .addGap(75, 75, 75)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bitaBtn)
-                    .addComponent(enemBtn)
-                    .addComponent(MyCartsBtn))
+                    .addComponent(bitaButt)
+                    .addComponent(EnemyButt)
+                    .addComponent(myCartBtn))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(44, Short.MAX_VALUE))
@@ -670,10 +679,6 @@ public class durakInt extends javax.swing.JFrame {
        
     }//GEN-LAST:event_jToggleButton16MouseClicked
 
-    private void bitaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bitaBtnActionPerformed
-        bita = !bita;
-    }//GEN-LAST:event_bitaBtnActionPerformed
-
     private void jToggleButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton16ActionPerformed
         buttons("6 ♥",jToggleButton16);       
     }//GEN-LAST:event_jToggleButton16ActionPerformed
@@ -686,13 +691,29 @@ public class durakInt extends javax.swing.JFrame {
         buttons("6 ♣",jToggleButton28);        
     }//GEN-LAST:event_jToggleButton28ActionPerformed
 
-    private void enemBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enemBtnActionPerformed
-        enem1 = !enem1;
-    }//GEN-LAST:event_enemBtnActionPerformed
+    private void EnemyButtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnemyButtActionPerformed
+        for (Map.Entry<String, javax.swing.JToggleButton> pair : cards.entrySet()) {            
+            cangeenem1(pair.getKey(),pair.getValue());   
+            pair.getValue().setSelected(false);
+        }
+        cards.clear();
+    }//GEN-LAST:event_EnemyButtActionPerformed
 
-    private void MyCartsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MyCartsBtnActionPerformed
-        myCart = !myCart;
-    }//GEN-LAST:event_MyCartsBtnActionPerformed
+    private void bitaButtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bitaButtActionPerformed
+        for (Map.Entry<String, javax.swing.JToggleButton> pair : cards.entrySet()) {
+            change(pair.getKey(),pair.getValue());
+            pair.getValue().setSelected(false);
+        }
+        cards.clear();
+    }//GEN-LAST:event_bitaButtActionPerformed
+
+    private void myCartBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myCartBtnActionPerformed
+        for (Map.Entry<String, javax.swing.JToggleButton> pair : cards.entrySet()) {
+            myCarts(pair.getKey(),pair.getValue());
+            pair.getValue().setSelected(false);
+        }        
+        cards.clear();        
+    }//GEN-LAST:event_myCartBtnActionPerformed
     
     
     /**
@@ -731,9 +752,8 @@ public class durakInt extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JToggleButton MyCartsBtn;
-    private javax.swing.JToggleButton bitaBtn;
-    private javax.swing.JToggleButton enemBtn;
+    private javax.swing.JButton EnemyButt;
+    private javax.swing.JButton bitaButt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JToggleButton jToggleButton1;
@@ -772,42 +792,40 @@ public class durakInt extends javax.swing.JFrame {
     private javax.swing.JToggleButton jToggleButton7;
     private javax.swing.JToggleButton jToggleButton8;
     private javax.swing.JToggleButton jToggleButton9;
+    private javax.swing.JButton myCartBtn;
     // End of variables declaration//GEN-END:variables
-    public void change(String s, javax.swing.JToggleButton button) {
-      
+    public void change(String s, javax.swing.JToggleButton button) {      
         if (button.getText().equals("Бита")) {
             button.setText(s);
         } else {
             button.setText("Бита");
-        }        
+        } 
     }
     public void cangeenem1(String s, javax.swing.JToggleButton button) {
       
-        if (button.getText().equals(s + " Враг1")) {
+        if (button.getText().equals(s + " Враг")) {
             button.setText(s);
         } else {
-            button.setText(s + " Враг1");
-        }        
+            button.setText(s + " Враг");
+        }
     }
-    public void myCarts(String s, javax.swing.JToggleButton button) {
-        
+    public void myCarts(String s, javax.swing.JToggleButton button) {               
         if (button.getText().equals(s + " Мои")) {
             button.setText(s);
         } else {
             button.setText(s + " Мои");
-        }        
+        }         
     }
-    public void buttons(String s, javax.swing.JToggleButton button) {
-        if (bita) {
-            change(s,button);
-        }
-        if (enem1) {
-            cangeenem1(s,button);
-        }
-        if (myCart) {
-            myCarts(s,button);
-        }
-    }
+    
+    
+    
+    public void buttons(String s, javax.swing.JToggleButton button) {               
+        if (!cards.containsKey(s)) {
+            cards.put(s, button);
+        } else {
+            cards.remove(s);
+        }      
+    }   
 }
 
 
